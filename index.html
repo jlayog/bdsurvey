@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Jerel Layog">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="FreeCodeCamp Survey Form Project">
+        <title>Better Developer Sign-In Form</title>
+        <link rel="stylesheet"  href="css/sfcss.css">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|PT+Serif:400,400i,700,700i|Roboto+Condensed:400,700,700i" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+      <div class="img-logo">
+      <img src="https://i.gyazo.com/670bd6b5c25b7f028050b55252cb4233.png">
+      </div>
+    <div>
+    <h1 id="title">Better Developer Sign-In Form</h1>
+    </div>
+    
+      <div id="sub-title">Developing a better you.</div>
+      
+    <div id="form-outer">
+      
+      <p id="description">Welcome and thank you for coming! Please sign-in and fill-out the fields below.</p><br>
+       
+      <form action="/#">
+       <div id="survey-form">
+         <div class="labels">
+           <label id="name" for="name">* Name</label>
+         </div>
+         <div class="right-side">
+           <input type="text" name="name" id="name" class="input-field" placeholder=" Enter your full name" required><br>
+         </div>
+         <div class="labels">
+         <label id="nickname" for="nickname">Nickname</label>
+         </div>
+         <div class="right-side">
+           <input type="text" name="nickname" id="nickname" class="input-field" placeholder=" What would you like to be called by?"><br>
+         </div>
+         <div class="labels">
+           <label id="email" for="email">* E-mail</label>
+         </div>
+         <div class="right-side">
+           <input type="email" name="email" id="email" class="input-field" placeholder=" example@email.com"><br>
+         </div>
+         <div class="labels">
+           <label id=" discord-tag" for="discord-tag">Discord Tag</label>
+         </div>
+         <div class="right-side">
+           <input type="text" name="discord-tag" id="discord-tag" class="input-field" placeholder=" e.g. Dad#1234"><br>
+         </div>
+         <div class="labels">
+           <label id="age" for="age">* Age</label>
+         </div>
+         <div class="right-side">
+           <input type="number" name="age" id="age" min="1" max="120" class="input-field" placeholder=" How old are you?"><br>
+         </div>
+         <div class="labels">
+           <label id="discover" for="discover">How did you discover Better Developer?</label>
+         </div>
+        <div class="right-side">
+          <ul style="list-style: none"> <!--- ul style="list-style:none" actually helps order the radio buttons and checkboxes (you'll see further down) in a column/linear fashion and removes bullets/numbers. Super useful when these input types won't go where you want them to --->
+            <li class="radio"><label class="radio-text"><input name="radio-options" value="1" type="radio" class="radio-text">Social Media</label></li>
+               <li class="radio"><label class="radio-text"><input name="radio-options" value="2" type="radio" class="radio-text">Friend</label></li>
+                  <li class="radio"><label class="radio-text"><input name="radio-options" value="3" type="radio">Discord Invite</label></li>
+          </ul>
+         </div><br>
+           
+         <div class="labels">
+           <label for="experience">* What is your current level of coding?</label>
+         </div>
+ 
+         <div class="right-side">
+           <select id="dropdown" name="experience" class="dropdown">
+             <!--- Was experiencing trouble with this earlier, because the drop down appeared on the left side with the labels class. Fixed it by adjusting the height and width (basically copied the input-field class, which seemed to fix it first.) --->
+             <option disabled value>Select an option</option>
+             <option value>Beginner</option>
+             <option value>Proficient</option>
+             <option value>Intermediate</option>
+             <option value>Expert</option>
+           </select>
+         </div>
+         
+         <div class="labels">
+           <label id="languages" for="languages">What languages are you interested in (or familiar with)?</label>
+         </div>
+           
+         <div class="right-side">
+           <ul id="languages" style="list-style: none">
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="Java">Java</label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="C++">C++</label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="Python">Python</label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="Javascript">Javascript</label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="HTML">HTML</label></li>
+               <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="CSS">CSS</label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="Other">Other <input id="other-text" class="checkbox-line" type="text"></label></li> <!--- please refer to css to reference the line after the 'other' checkbox --->
+            </ul>
+</div>
+
+<div class="labels"> 
+  <label id="text-area" for="text-area">Is there anything you'd like to tell us?</label>
+</div>
+
+<div class="right-side">
+  <!--- Introduction of textarea here. Helps for body of input text instead of 'input type="text"' --->
+  <textarea class="text-area" placeholder=" It could be anything, and I mean ANYTHING."></textarea><br>
+  
+  <button id="submit" type="submit" class="submit">Let's Go!</button>
+</div>
+
+</body>
+</html>
+
